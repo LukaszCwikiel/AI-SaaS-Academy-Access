@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+(function () {
+    const paid = localStorage.getItem("paid");
+
+    console.log("CHECK PAID =", paid);
+
+    if (paid !== "true") {
+        console.log("BLOCK → index");
+        window.location.replace("index.html");
+    }
+})();
+</script>
+
+<header class="topbar">
+<h2>AI SaaS Dashboard</h2>
+</header>
+
+<section class="block">
+
+<h1>Modules</h1>
+
+<div class="module-grid">
+
+<button onclick="location.href='module-1-llm-fundamentals.html'">Module 1</button>
+<button onclick="location.href='module-2-prompt-systems.html'">Module 2</button>
+<button onclick="location.href='module-3-embeddings-vectors.html'">Module 3</button>
+<button onclick="location.href='module-4-rag-systems.html'">Module 4</button>
+<button onclick="location.href='module-5-ai-agents.html'">Module 5</button>
+<button onclick="location.href='module-6-ai-saas-monetization.html'">Module 6</button>
+
+</div>
+
+</section>
+
+</body>
+</html>
